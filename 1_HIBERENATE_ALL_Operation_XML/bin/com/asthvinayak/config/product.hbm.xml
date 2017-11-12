@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--product.hbm.xml -->
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.asthvinayak.dto.ProductDTO" table="product_table">
+		<id name="productId" type="java.lang.Integer">
+			<column name="pid" />
+			<generator class="increment" />
+		</id>
+		<property name="productName" column="pname" type="java.lang.String"
+			not-null="true" />
+		<property name="price" column="price" type="java.lang.Double" />
+		<property name="tax" column="tax" type="big_decimal" />
+		<property name="purchaseDate" column="purchaseDate" type="java.sql.Date" />
+	</class>
+</hibernate-mapping>
